@@ -118,4 +118,9 @@ speak "Caching .stack-work"
 rsync -avq "$WORK_DIR/.stack-work/" "$SANDBOX_DIR"
 cp -Rp "$WORK_DIR/.stack-work" "$BUILD_DIR"
 
-speak "Finished!"
+speak "Finished with stack!"
+
+#### Building with Hakyll
+cd "$BUILD_DIR"
+site rebuild
+
